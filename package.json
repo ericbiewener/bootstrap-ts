@@ -1,0 +1,35 @@
+{
+  "name": "bootstrap-ts",
+  "version": "0.0.1",
+  "main": "dist/main.js",
+  "repository": "https://github.com/ericbiewener/bootsrap-ts",
+  "author": "Eric Biewener <ebiewener@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/main.js",
+    "debug": "tsc && node --nolazy --inspect-brk=9229 dist/main.js",
+    "dev": "tsc -w",
+    "prettier": "prettier --write \"**/*.{ts,tsx,js}\"",
+    "eslint": "eslint --fix --ext .ts,.tsx ./src"
+  },
+  "devDependencies": {
+    "@types/node": "12.7.11",
+    "eslint": "6.5.1",
+    "eslint-config-ericbiewener-typescript": "5.0.1",
+    "husky": "3.0.8",
+    "lint-staged": "9.4.1",
+    "typescript": "3.6.3"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
