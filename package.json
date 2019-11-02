@@ -34,7 +34,11 @@
     "typescript": "3.6.3"
   },
   "lint-staged": {
-    "**/*.{ts,tsx,js}": [
+    "**/*.{json,yml}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{ts,tsx,gql}": [
       "prettier --write",
       "eslint --fix",
       "git add"
