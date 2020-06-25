@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
-  "repository": "https://github.com/ericbiewener/bootsrap-ts",
+  "repository": "https://github.com/ericbiewener/bootstrap-ts",
   "author": "Eric Biewener <ebiewener@gmail.com>",
   "license": "MIT",
   "files": [
