@@ -16,10 +16,9 @@ const downloadFile = (url: string, filepath: string) =>
       },
     })
 
-    rsp.on('finish', resolve)
-
     const file = fs.createWriteStream(filepath)
-    rsp.pipe(file)
+    const stream = rsp.pipe(file)
+    stream.on('finish', resolve)
   })
 
 ;(async () => {
