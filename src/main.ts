@@ -60,5 +60,6 @@ const downloadFile = (url: string, filepath: string) =>
     log().red(e)
   } finally {
     browser.close()
+    process.exit()
   }
 })()
